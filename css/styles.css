@@ -257,6 +257,89 @@ select:-webkit-autofill:focus {
 }
 
 
+/* HERO */
+.hero {
+    padding-top: 90px;
+    padding-bottom: 90px;
+}
+
+.hero__container {
+    display: flex;
+    align-items: center;
+}
+
+.hero__imgs-wrapper {
+
+}
+
+.hero__imgs__main {
+    display: block;
+    width: 445px;
+    height: 445px;
+    margin-bottom: 32px;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+.hero__imgs-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.hero__imgs-item {
+    position: relative;
+    display: flex;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 3px solid transparent;
+    cursor: pointer;
+}
+
+.hero__imgs-item:hover {
+    opacity: 0.5;
+}
+
+.hero__imgs-item:active {
+    opacity: 0.3;
+}
+
+.hero__imgs-item--active {
+    border-color: var(--accent-color);
+}
+
+.hero__imgs-item--active:hover {
+    opacity: 1;
+}
+
+.hero__imgs-item--active::after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    content: "";
+    background-color: rgba(255, 255, 255, 0.75);
+}
+
+.hero__imgs-item:not(:last-child) {
+    margin-right: 15px;
+}
+
+.hero__imgs-img {
+    width: 85px;
+    height: 85px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.hero__content-wrapper {
+}
+
+
 @media
 only screen and (-webkit-min-device-pixel-ratio: 2),
 only screen and (   min--moz-device-pixel-ratio: 2),
