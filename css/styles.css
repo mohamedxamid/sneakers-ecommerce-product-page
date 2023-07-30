@@ -113,6 +113,144 @@ select:-webkit-autofill:focus {
 }
 
 
+/* LOGO */
+.logo {
+    display: flex;
+    flex-shrink: 0;
+}
+
+.logo:hover {
+    opacity: 0.8;
+}
+
+.logo:active {
+    opacity: 0.6;
+}
+
+.logo__img {
+    width: 138px;
+    height: 20px;
+    object-fit: contain;
+}
+
+
+/* SITENAV */
+.sitenav__list {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.sitenav__item {
+    position: relative;
+    padding-top: 41px;
+    padding-bottom: 45px;
+}
+
+.sitenav__item:not(:last-child) {
+    margin-right: 32px;
+}
+
+.sitenav__link {
+    display: block;
+    font-size: 15px;
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.sitenav__link:hover {
+    color: var(--dark-color);
+}
+
+.sitenav__link:hover::after {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 4px;
+    background-color: var(--accent-color);
+    content: "";
+}
+
+.sitenav__link:active {
+    opacity: 0.6;
+}
+
+
+/* SITE-HEADER */
+.site-header__container {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #E4E9F2;
+}
+
+.site-header__logo {
+    margin-right: 60px;
+}
+
+.site-header__sitenav {
+    margin-right: auto;
+}
+
+.site-header__cart {
+    position: relative;
+    display: inline-block;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    margin-right: 46px;
+    color: var(--text-color);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.site-header__cart:hover {
+    color: var(--dark-color);
+}
+
+.site-header__cart:active {
+    opacity: 0.6;
+}
+
+.site-header__cart::before {
+    position: absolute;
+    right: -7px;
+    top: -6px;
+    width: 19px;
+    height: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 10px;
+    color: #fff;
+    background-color: var(--accent-color);
+    border-radius: 8px;
+    content: "0";
+}
+
+.site-header__profile {
+    display: flex;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    overflow: hidden;
+    text-decoration: none;
+}
+
+.site-header__profile:hover {
+    border-color: var(--accent-color)
+}
+
+.site-header__profile-img {
+    display: block;
+    width: 47px;
+    height: 47px;
+    border-radius: 50%;
+    object-fit: contain;
+}
+
+
 /* MAIN CONTENT */
 .main-content {
     flex-grow: 1;
