@@ -10,7 +10,7 @@
 @font-face {
     font-family: "Kumbh Sans";
     src: url("../fonts/KumbhSans-Bold.woff2") format("woff2"),
-        url("../fonts/KumbhSans-Bold.woff") format("woff");
+    url("../fonts/KumbhSans-Bold.woff") format("woff");
     font-weight: bold;
     font-style: normal;
     font-display: swap;
@@ -19,7 +19,7 @@
 @font-face {
     font-family: "Kumbh Sans";
     src: url("../fonts/KumbhSans-Regular.woff2") format("woff2"),
-        url("../fonts/KumbhSans-Regular.woff") format("woff");
+    url("../fonts/KumbhSans-Regular.woff") format("woff");
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -454,9 +454,13 @@ select:-webkit-autofill:focus {
     padding: 0;
     padding-bottom: 10px;
     margin: 0;
-    scrollbar-color: var(--accent-color) #e4e9f2;
     list-style: none;
     overflow: auto;
+
+    /* Foreground, Background */
+    scrollbar-color: var(--accent-color) #e4e9f2;
+}
+
 .img-showcase--lightbox .img-showcase__thumbnails {
     max-width: 550px;
 }
