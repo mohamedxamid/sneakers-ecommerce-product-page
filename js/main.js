@@ -18,9 +18,10 @@ if (elSiteHeaderCartLink) {
 
 
 // Image Showcase
-const elImgShowcaseActiveImg = document.querySelector('.img-showcase__active-img');
-const elsImgShowcaseThumbnailButton = document.querySelectorAll('.js-img-showcase-thumbnail-button');
-const elsImgThumbnail = document.querySelectorAll('.img-showcase__thumbnail');
+const elProductPageGallery = document.querySelector('.product-page__gallery');
+const elImgShowcaseActiveImg = elProductPageGallery.querySelector('.img-showcase__active-img');
+const elsImgShowcaseThumbnailButton = elProductPageGallery.querySelectorAll('.js-img-showcase-thumbnail-button');
+const elsImgThumbnail = elProductPageGallery.querySelectorAll('.img-showcase__thumbnail');
 
 elsImgShowcaseThumbnailButton.forEach(function (elButton) {
     elButton.addEventListener('click', function (evt) {
