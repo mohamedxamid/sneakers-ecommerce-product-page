@@ -12,7 +12,7 @@ if (elSiteHeaderCartLink) {
     elSiteHeaderCartLink.addEventListener('click', function (evt) {
         evt.preventDefault();
 
-        elSiteHeaderCartModal.classList.toggle('site-header__cart-modal--open');
+        elSiteHeaderCartModal.classList.toggle(modifiers.siteHeaderCartModalOpen);
     })
 }
 
