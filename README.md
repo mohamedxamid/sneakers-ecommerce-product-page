@@ -5,3 +5,4 @@
 3. Lightbox, o'nga va chapga rasm o'tish imkoniyati
 4. img showcase va lightbox js imkoniyatlari ikkalsi uchun umumlashtirib yozilgan
 5. product-info__quantity
+6. img-showcase__thumbnails da rasmlar soni ortib ketsa scroll paydo bo'ladi
