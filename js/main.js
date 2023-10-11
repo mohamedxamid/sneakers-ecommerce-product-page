@@ -1,7 +1,9 @@
 const modifiers = {
     siteHeaderCartModalOpen: 'site-header__cart-modal--open',
     imgThumbnailActive: 'img-showcase__thumbnail--active',
-    lightboxOpen: 'lightbox--open'
+    lightboxOpen: 'lightbox--open',
+    sitenavTogglerActive: 'sitenav-toggler--active',
+    siteheaderActive: 'site-header--active'
 }
 
 // Shopping Cart Modal
@@ -154,5 +156,16 @@ if (elProductQtyDecrementButton) {
         if (qty > 0) {
             elProductQty.textContent = parseInt(elProductQty.textContent, 10) - 1;
         }
+    })
+}
+
+// SITENAV-TOGGLER
+const elSiteHeader = document.querySelector('.site-header');
+const elSitenavToggler = elSiteHeader.querySelector('.js-sitenav-toggler');
+
+if (elSitenavToggler) {
+    elSitenavToggler.addEventListener('click', function() {
+        elSitenavToggler.classList.toggle(modifiers.sitenavTogglerActive);
+        elSiteHeader.classList.toggle(modifiers.siteheaderActive);
     })
 }
