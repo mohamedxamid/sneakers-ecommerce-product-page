@@ -47,7 +47,7 @@ const elLightbox = document.querySelector('.lightbox');
 const elLightboxToggler = document.querySelector('.js-lightbox-toggler');
 const elLightboxClose = document.querySelector('.js-lightbox-close');
 
-if (elLightboxToggler) {
+if (document.body.offsetWidth > 550 && elLightboxToggler) {
     elLightboxToggler.addEventListener('click', function () {
         elLightbox.classList.add(modifiers.lightboxOpen);
     });
@@ -136,6 +136,63 @@ if (elLightboxControlPrev) {
     });
 }
 
+// IMG-SHOWCASE-CONTROL
+const elImgShowCaseControlPrev = document.querySelector('.js-img-showcase-control-prev');
+const elImgShowCaseControlNext = document.querySelector('.js-img-showcase-control-next');
+
+if (elImgShowCaseControlNext) {
+    elImgShowCaseControlNext.addEventListener('click', function() {
+        // Find active li element
+        const elActiveItem = elProductPageGallery.querySelector('.img-showcase__thumbnail--active');
+
+         // Remove active li element's styles
+        elActiveItem.classList.remove(modifiers.imgThumbnailActive);
+
+        // Make active next li element
+        let elNextActiveItem;
+
+        console.log(elsImgThumbnail);
+
+        if (elActiveItem.nextElementSibling === null) {
+            elNextActiveItem = elsImgThumbnail[0];
+        } else {
+            elNextActiveItem = elActiveItem.nextElementSibling;
+        }
+
+        console.log(elNextActiveItem);
+
+        elNextActiveItem.classList.add(modifiers.imgThumbnailActive);
+
+         // Update active img src accordingly
+        elImgShowcaseActiveImg.src = elNextActiveItem.children[0].dataset.imgShowcaseBig;
+        elImgShowcaseActiveImg.setAttribute('srcset', `${elNextActiveItem.children[0].dataset.imgShowcaseBig} 1x, ${elNextActiveItem.children[0].dataset.imgShowcaseRetina} 2x`)
+    })
+}
+
+if (elImgShowCaseControlPrev) {
+    elImgShowCaseControlPrev.addEventListener('click', function() {
+        // Find active li element
+        const elActiveItem = elProductPageGallery.querySelector('.img-showcase__thumbnail--active');
+
+         // Remove active li element's styles
+        elActiveItem.classList.remove(modifiers.imgThumbnailActive);
+
+        // Make active next li element
+        let elNextActiveItem;
+
+        if (elActiveItem.previousElementSibling === null) {
+            elNextActiveItem = elsImgThumbnail[elsImgThumbnail.length - 1];
+        } else {
+            elNextActiveItem = elActiveItem.previousElementSibling;
+        }
+
+        elNextActiveItem.classList.add(modifiers.imgThumbnailActive);
+
+         // Update active img src accordingly
+        elImgShowcaseActiveImg.src = elNextActiveItem.children[0].dataset.imgShowcaseBig;
+        elImgShowcaseActiveImg.setAttribute('srcset', `${elNextActiveItem.children[0].dataset.imgShowcaseBig} 1x, ${elNextActiveItem.children[0].dataset.imgShowcaseRetina} 2x`)
+    })
+}
 
 // Product Count
 const elProductQty = document.querySelector('.product-info__quantity');
